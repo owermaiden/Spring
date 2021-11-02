@@ -10,8 +10,10 @@ public class CybertekApp {
 
 
 
-        Course course2 = container.getBean("API", Course.class);
+        Course course2 = container.getBean("java", Course.class);
         course2.getTeachingHours();
+
+        System.out.println(course2.toString());
     }
 
 
