@@ -7,6 +7,6 @@ import org.springframework.stereotype.Component;
 public class Java implements Course {
     @Override
     public void getTeachingHours() {
-        System.out.println("Weekly teaching hours : 30");
+        System.out.println("this is java");
     }
 }
