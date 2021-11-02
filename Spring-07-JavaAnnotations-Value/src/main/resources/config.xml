@@ -7,4 +7,6 @@
 
     <context:component-scan base-package="com.cybertek.services"/>
 
+    <!-- buraya yadığımız context ile Spring e hangi paketteki annotationları dikkate alacapını belirtiyoruz...-->
+
 </beans>
