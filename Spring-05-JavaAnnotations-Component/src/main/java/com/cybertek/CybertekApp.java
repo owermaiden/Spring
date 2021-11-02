@@ -10,6 +10,9 @@ public class CybertekApp {
 
         Course course = container.getBean("selenium", Course.class);
         course.getTeachingHours();
+
+        Course course2 = container.getBean("API", Course.class);
+        course2.getTeachingHours();
     }
 
 
