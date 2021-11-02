@@ -4,10 +4,15 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <!-- Constructor injection yaptık...ref tag için buradaki bean adını veriyoruz...-->
     <bean id="java" class="com.cybertek.services.Java">
         <constructor-arg ref="officeHours"/>
     </bean>
-    <bean id="selenium" class="com.cybertek.services.Selenium"/>
+
+    <!-- Selenium a setter injection yaptık...name tag için Setter ismini, ref tag için buradaki bean ismini veriyoruz..-->
+    <bean id="selenium" class="com.cybertek.services.Selenium">
+        <property name="officeHours" ref="officeHours"/>
+    </bean>
 
     <bean id="officeHours" class="com.cybertek.services.OfficeHours"/>
 
