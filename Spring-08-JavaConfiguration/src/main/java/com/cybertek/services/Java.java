@@ -5,11 +5,18 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import java.util.Arrays;
 
 @Component
 @Scope("prototype")
 public class Java implements Course {
+
+    @PostConstruct
+    public void postConstruct(){
+        System.out.println("Executing post construct");
+    }
 
     @Value("EU7")
     private String batch;
@@ -33,5 +40,10 @@ public class Java implements Course {
     @Override
     public void getTeachingHours() {
         System.out.println("this is java");
+    }
+
+    @PreDestroy
+    public void preDestroy(){
+        System.out.println("Executing pre destroy");
     }
 }
